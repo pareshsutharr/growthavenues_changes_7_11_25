@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growth Avenues — Behaviour-First Mutual Fund Strategies</title>
+    <meta name="description" content="Behaviour-first Mutual Fund distribution and goal-based SIP planning. Simple, disciplined, and transparent investing with Growth Avenues." />
+    <meta property="og:title" content="Growth Avenues — Behaviour-First Mutual Fund Strategies" />
+    <meta property="og:description" content="Behaviour-first Mutual Fund distribution and goal-based SIP planning. Simple, disciplined, and transparent investing with Growth Avenues." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/assets/companylogo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Growth Avenues — Behaviour-First Mutual Fund Strategies" />
+    <meta name="twitter:description" content="Behaviour-first Mutual Fund distribution and goal-based SIP planning." />
+    
+    <!-- Fonts: Use only these 3 families across the site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Compliance values are read via import.meta.env in app code; no placeholders here. -->
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Growth Avenues",
+        "url": "/",
+        "logo": "/assets/companylogo.png",
+        "sameAs": [
+          "https://www.linkedin.com/company/growth-avenues1/",
+          "https://www.instagram.com/growth.avenues"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Growth Avenues",
+        "url": "/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- GA4 (optional; ID from import.meta.env) -->
+    <script type="module">
+      const ID = import.meta.env?.VITE_GA_MEASUREMENT_ID;
+      if (ID) {
+        const s = document.createElement('script');
+        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);} window.gtag = gtag;
+        gtag('js', new Date()); gtag('config', ID);
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

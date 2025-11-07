@@ -1,0 +1,81 @@
+/* Global design tokens */
+:root {
+  /* Brand & neutrals */
+  --brand: #044B73;           /* mapped to existing brand hue */
+  --brand-weak: #d0e7ff;      /* borders / subtle brand bg */
+  --ink-900: #0f172a;         /* titles */
+  --ink-700: #1f2937;         /* body strong */
+  --ink-500: #475569;         /* secondary text */
+  --line: rgba(0,0,0,0.08);   /* borders */
+  --card: #f9fafb;            /* card bg */
+  --card-alt: #f3f4f6;        /* hover bg */
+  --surface: #ffffff;         /* surfaces */
+  --shadow: 0 20px 40px rgba(0,0,0,0.10);
+
+  /* Radii & spacing */
+  --r-sm: 10px;
+  --r-md: 12px;
+  --r-lg: 14px;
+  --space-1: 8px;
+  --space-2: 10px;
+  --space-3: 12px;
+  --space-4: 16px;
+
+  /* Typography */
+  --h-xs: 14px;
+  --h-sm: 15px;
+  --text: 13px;
+  --meta: 12px;
+
+  /* Animation */
+  --t-fast: 160ms;
+  --easing: ease;
+
+  /* Site layout */
+  --site-max: 1200px;         /* global max content width */
+
+  /* Typography */
+  --font-heading: 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-accent: 'Petrona', 'Plus Jakarta Sans', serif;
+}
+
+/* Focus ring (consistent across app) */
+:root { --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.35); }
+:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* Global layout wrapper */
+.site-container {
+  width: 100%;
+  max-width: var(--site-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Cap Bootstrap containers to a consistent max width */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  max-width: var(--site-max);
+}
+
+/* Ensure section content does not overflow horizontally */
+main, section { overflow-x: clip; }
+
+/* Apply global typography */
+html, body { font-family: var(--font-body); }
+h1, h2, h3, h4, h5, h6,
+.ga-title,
+.section-heading h1,
+.section-heading h2,
+.section-heading h3 { font-family: var(--font-heading); }
+small, .ga-sub { font-family: var(--font-body); }
